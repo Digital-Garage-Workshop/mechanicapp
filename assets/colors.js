@@ -1,0 +1,16 @@
+export const mainColor = '#0093FF';
+export const lightColor = '#5CBAFF';
+export const lilLightColor = '#abd9fa';
+export const mainWhite = "#FFFFFF";
+export const secondWhite = "#FBFBFB";
+export const mainGrey = '#EBEEEF';
+export const offCol = '#B3B2B6';
+export const off = '#DCE0E1';
+export const mainOff = '#F5F6F8';
+export const offGreen = '#F8FFF3';
+export const lightBlack = '#282828';
+export const lightGrey = '#E9EBEE';
+export const darkGrey = '#a9a9a9';
+export const transParent = 'rgba(60, 60, 60, 0.5)';
+export const LinkCol = '#229DCC';
+export const redColor = '#dc3545';

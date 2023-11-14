@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config>
+        <trust-anchors>
+                <certificates src="@raw/chem"/>
+                <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="true">203.26.189.33</domain>
+        <trust-anchors>
+            <certificates src="@raw/chem" />
+        </trust-anchors>
+        <pin-set expiration="2023-04-19">
+            <pin digest="SHA-256">+uqIQYYtyL6uUUFNsnVAJRbqic72+7pq6SskS6RjDuQ=</pin>
+       </pin-set>
+    </domain-config>
+    <debug-overrides>
+        <trust-anchors>
+               <certificates src="@raw/chem"/>
+       </trust-anchors>
+   </debug-overrides>
+</network-security-config>
+
+<!-- 
+    SSL iinhaa ping avxdaa mac deer:
+        .crt:
+            openssl x509 -in chem.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+        .cer:
+            openssl x509 -in chem.cer -pubkey -noout -inform der | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+-->

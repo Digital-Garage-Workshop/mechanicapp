@@ -1,0 +1,121 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/Styles.js",
+      "sha1": "5b207b696d6719439015e15a328dc9ac43af43c6"
+    },
+    {
+      "path": "assets/colors.js",
+      "sha1": "24efa8c9ab03851e8d0a3f90ee5ff0ead8af51f1"
+    },
+    {
+      "path": "assets/images/BoajLogo.png",
+      "sha1": "71ecd83f7c8ca106f66d114da7e7bf0e696fe246"
+    },
+    {
+      "path": "assets/images/GreenLogo.png",
+      "sha1": "ef7a617497162927eafa608973fdca2571e4917b"
+    },
+    {
+      "path": "assets/images/Load.gif",
+      "sha1": "a8d7c620d8d3ee0ba230afee6e1cd9615c6a9779"
+    },
+    {
+      "path": "assets/images/LoadingBalls.gif",
+      "sha1": "6ac1db265ae7ede42a97cf1d4810bcad741222e4"
+    },
+    {
+      "path": "assets/images/MobiLogo.png",
+      "sha1": "bf4daeef2f6b757639c5378700589186a844ba1e"
+    },
+    {
+      "path": "assets/images/basel.png",
+      "sha1": "8469577930f814ed6e7333fd3309b650842a8469"
+    },
+    {
+      "path": "assets/images/bgdark.jpg",
+      "sha1": "e4af46d968e09ad88f6b72b998192eb338482934"
+    },
+    {
+      "path": "assets/images/conv.png",
+      "sha1": "1271adbe259e549f63282a431bfaddb2cd9eeee2"
+    },
+    {
+      "path": "assets/images/file.png",
+      "sha1": "3882dae50394de53698522186c610af91e8102a2"
+    },
+    {
+      "path": "assets/images/folder.png",
+      "sha1": "1ff6d1895b26e299b520b9e6ec349983f9545dc1"
+    },
+    {
+      "path": "assets/images/jdk-11.0.16_macos-aarch64_bin.dmg",
+      "sha1": "ef701ce735a553e4ba4ebf4a1b8b4f7da70c778d"
+    },
+    {
+      "path": "assets/images/marker copy.png",
+      "sha1": "0887a3f8f7f8f23b82c34bedd0a1e8ff9e60d5c2"
+    },
+    {
+      "path": "assets/images/marker.png",
+      "sha1": "0887a3f8f7f8f23b82c34bedd0a1e8ff9e60d5c2"
+    },
+    {
+      "path": "assets/images/minamata.png",
+      "sha1": "44bfd57370ae257991284b36220fb88368522a6d"
+    },
+    {
+      "path": "assets/images/montreal.png",
+      "sha1": "2ad37b9203f9da109a05c22deb78b08795aa04eb"
+    },
+    {
+      "path": "assets/images/noUser.jpeg",
+      "sha1": "9538fb61675e105d8ff47b890702a460fd8f65e0"
+    },
+    {
+      "path": "assets/images/nodata.png",
+      "sha1": "0eda64d1a8ada1252f23be9834d9e5ff1437c2aa"
+    },
+    {
+      "path": "assets/images/noimg.png",
+      "sha1": "9430a52b2d810d1f08b6c20c5355c07d9f02bb03"
+    },
+    {
+      "path": "assets/images/profile.jpg",
+      "sha1": "c56e24a98be81833ab28cc4bd5d8eeae504de132"
+    },
+    {
+      "path": "assets/images/roterdam.png",
+      "sha1": "3c00c6d1a32accf48666e9b3262a5c26772d9090"
+    },
+    {
+      "path": "assets/images/superMarioLogo.jpeg",
+      "sha1": "9613a416b9ad10f51517864717f4c77b3ec976a4"
+    },
+    {
+      "path": "assets/images/swipe1.png",
+      "sha1": "9a8a81eb63ec41069033d73428274fcda48225f4"
+    },
+    {
+      "path": "assets/images/swipe2.png",
+      "sha1": "465bc0ab4f5259df82ff45b384a327f9b1e179e3"
+    },
+    {
+      "path": "assets/images/swipe3.png",
+      "sha1": "9f694bff977cb00dad4f8db23df6c4cd0588bf19"
+    },
+    {
+      "path": "assets/images/userInfoBg.jpg",
+      "sha1": "bbe0f9f19dc5dce3e34ef3433bcacd1ef7da533e"
+    },
+    {
+      "path": "assets/images/video.png",
+      "sha1": "eb4076137e0a6db3593e1b90d0b76f9d2d0ef20d"
+    },
+    {
+      "path": "assets/json/Loader-Bars.json",
+      "sha1": "d19c5a677cde50951bfbe4a9b9acbd6ea5ffa9e8"
+    }
+  ]
+}

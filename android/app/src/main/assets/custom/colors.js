@@ -1,0 +1,12 @@
+export const mainColor = '#1C99A3';
+export const lightColor = '#E9F4F5';
+export const lilLightColor = '#F6FEFF';
+export const mainWhite = "#FFFFFF";
+export const secondWhite = "#FBFBFB";
+export const offCol = '#B3B2B6';
+export const off = '#DCE0E1';
+export const mainOff = '#F5F6F8';
+export const offGreen = '#F8FFF3';
+export const lightBlack = '#282828';
+export const lightGrey = '#E9EBEE';
+export const darkGrey = '#a9a9a9';
