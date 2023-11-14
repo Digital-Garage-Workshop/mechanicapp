@@ -1,18 +1,12 @@
-export const sessionName = 'admin';
-export const sessionPass = '89';
-export const dvCommand = 'PL_MDVIEW_004';
-export const adminSess = "65178215-7896-4513-8e26-896df9cb36ad";
-
-//TEST
-// export const urlService = 'http://172.169.88.90:16945/erp-services/RestWS/runJson';
-// export const urlName = 'https://chem-admin.interactive.mn/';
-// export const urlServiceFile = 'http://172.169.88.90:16945/erp-services/RestWS/runJson';
-
+export const sessionName = '';
+export const sessionPass = '';
+export const dvCommand = '';
+export const adminSess = "";
 //REAL
 export const baseApiUrl = 'https://mechanic.garage.mn/';
-export const urlService = 'http://203.26.189.33:8080/erp-services/RestWS/runJson';
-export const urlName = 'https://chem-admin.met.gov.mn/';
-export const urlServiceFile = 'http://203.26.189.33:8080/erp-services/FileServlet';
+export const urlService = '';
+export const urlName = '';
+export const urlServiceFile = '';
 
 export const getCurrentDate = () => {
     var date = new Date().getDate();
