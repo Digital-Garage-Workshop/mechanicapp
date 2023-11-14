@@ -4,7 +4,7 @@ import { mainColor, off } from '../../../assets/colors'
 import { styles } from '../../../assets/Styles'
 import { split } from 'lodash'
 
-const OffCard = props => {
+const OffCard = props => { 
     var value = props?.value;
     var label = props?.label;
 
