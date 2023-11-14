@@ -13,7 +13,7 @@ const OffCard = props => {
             if (split(value, "")[0] == ".") {
                 return 0 + value
             } else {
-                return value
+                return value;
             }
         } else {
             return 0
