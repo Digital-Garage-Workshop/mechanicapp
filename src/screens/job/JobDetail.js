@@ -48,14 +48,12 @@ const JobDetail = (prop) => {
             isChecked.push(itemId.toString());
         }
 
-        console.log("isChecked === ",isChecked);
         setIsChecked(isChecked);
         setIsHandled(true);
     };
     
     function handleItem(itemId) {
         if (isChecked.indexOf(itemId.toString()) > -1) {
-            /* setIsHandled(false); */
             return true;
         } else {
             return false;
@@ -130,8 +128,19 @@ const JobDetail = (prop) => {
             context[2],
             itemData.jobid
         );
-
+        if (response?.repairnote) {
+            setRepairnote(response?.repairnote);
+        }
+        if (response?.needchangepart) {
+            setChangepart(response?.needchangepart);
+        }
+        if (response?.carinfo?.kilometr) {
+            setKilometr(response?.carinfo?.kilometr);
+        }
+        
+        console.log(response?.repairnote);
         setItemArr(response);
+        console.log(itemArr?.carinfo.kilometr);
     };
 
     const getCheckListData = async () => {
@@ -356,20 +365,20 @@ const JobDetail = (prop) => {
                         </>
                 }
                 <View style={customStyles.headerContainer}>
-                    <OffCard label="Машины дугаар" value={itemArr?.carinfo.carnumber + ' | ' + itemArr?.jobid} icon={<MaterialIcons name="confirmation-number" size={25} color={mainColor} />} />
+                    <OffCard label="Машины дугаар" value={itemArr?.carinfo.carnumber + ' | ' + itemArr?.jobid} icon={<FontAwesome5 name="car" color={mainColor} size={25} />} />
                     {
                         itemArr?.category?.name ? 
                         <>
-                            <OffCard label="Category" value={itemArr?.category?.name} icon={<MaterialIcons name="confirmation-number" size={25} color={mainColor} />} />
+                            <OffCard label="Category" value={itemArr?.category?.name} icon={<FontAwesome5 name="wrench" color={mainColor} size={25} />} />
                         </> : <></>
                     }
                     {
                         itemArr?.subcategory?.name ? 
                         <>
-                            <OffCard label="Sub category" value={itemArr?.subcategory?.name} icon={<MaterialIcons name="confirmation-number" size={25} color={mainColor} />} />
+                            <OffCard label="Sub category" value={itemArr?.subcategory?.name} icon={<FontAwesome5 name="wrench" color={mainColor} size={25} />} />
                         </> : <></>
                     }
-                    <OffCard label="Status" value={itemArr?.status} icon={<MaterialIcons name="confirmation-number" size={25} color={mainColor} />} />
+                    <OffCard label="Status" value={itemArr?.status} icon={<FontAwesome5 name="square" color={mainColor} size={25} />} />
                     {isFinish ? <></>
                         : 
                         isStart ? 
@@ -395,7 +404,9 @@ const JobDetail = (prop) => {
                                 <Text numberOfLines={2} style={[styles.txt, { width: "70%" }]}>{measureType ? measureType.name : "Сонгох"}</Text>
                                 <Entypo name="chevron-right" size={20} color={mainColor} style={{ position: 'absolute', right: 5 }} />
                             </TouchableOpacity>
-                            <SingleInput label="Гүйлт оруулах" isNumber={true} setValue={setKilometr} value={kilometr} isMultiline={true} />
+                            {
+                                <SingleInput label="Гүйлт оруулах" isNumber={true} setValue={setKilometr} value={(itemArr?.carinfo.kilometr ? itemArr?.carinfo.kilometr : kilometr)} />
+                            }
                             <View style={customStyles.bodyContainer}>
                                 <TouchableOpacity onPress={kiloRequest} style={[styles.btn, { alignSelf: "center", paddingHorizontal: "20%", marginTop: 10 }]}>
                                     <Text style={[styles.title, { color: mainWhite }]}>Хадгалах</Text>
