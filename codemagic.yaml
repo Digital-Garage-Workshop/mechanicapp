@@ -38,6 +38,9 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m1
     environment:
+      ios_signing:
+        distribution_type: development
+        bundle_identifier: 'com.service.garage'
       groups:
         - firebase_credentials
       vars:
@@ -48,6 +51,9 @@ workflows:
       - name: Install npm dependencies
         script: |
           npm install --legacy-peer-deps
+      - name: Install CocoaPods dependencies
+        script: |
+          cd ios && pod install
       - name: Build ipa for distribution
         script: |
           xcode-project build-ipa \
