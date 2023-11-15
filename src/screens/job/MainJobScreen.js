@@ -115,21 +115,17 @@ const MainJobScreen = () => {
     };
 
     useEffect(() => {
+        setData([]);
+        setLoading(true);
         if(isFocused){ 
             getData();
         }
     }, [currentPage, isFocused]);
 
-    useEffect(() => {
-        setLoading(true);
-    }, []);
-
     useFocusEffect(
         React.useCallback(() => {
             return () => {
                 refreshData();
-                // setWhtCriteria('');
-                // setSearchText('');
             };
         }, [])
     );
