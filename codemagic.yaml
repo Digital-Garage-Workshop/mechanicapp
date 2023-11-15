@@ -20,9 +20,9 @@ workflows:
       - name: Build Android release
         script: |
           cd android
-          ./gradlew bundleRelease
+          ./gradlew assembleRelease
     artifacts:
-      - android/app/build/outputs/**/*.aab
+      - android/app/build/outputs/**/*.apk
 
     publishing:
       firebase:
