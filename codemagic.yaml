@@ -9,10 +9,9 @@ workflows:
       vars:
         PACKAGE_NAME: 'com.service.garage'
     scripts:
-      # ....
       - name: Install npm dependencies
         script: |
-          npm install
+          npm install --legacy-peer-deps
       - name: Set Android SDK location
         script: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
@@ -43,7 +42,9 @@ workflows:
         XCODE_WORKSPACE: 'service.garage.xcworkspace' # <-- Name of your Xcode workspace
         XCODE_SCHEME: 'service.garage' # <-- Name of your Xcode scheme
     scripts:
-      # ...
+      - name: Install npm dependencies
+        script: |
+          npm install --legacy-peer-deps
       - name: Build ipa for distribution
         script: |
           xcode-project build-ipa \
