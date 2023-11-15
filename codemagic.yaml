@@ -31,6 +31,7 @@ workflows:
           app_id: 1:303065862104:android:a48c33a8cb48fe7130ecad
           groups:
             - android-testers
+          artifact_type: 'apk'
 
   ios-workflow:
     name: iOS Workflow
