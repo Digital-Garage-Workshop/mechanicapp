@@ -17,6 +17,7 @@ import LoginScreen from './src/screens/login/LoginScreen';
 import HomeScreen from './src/screens/home/HomeScreen';
 import MainJobScreen from './src/screens/job/MainJobScreen';
 import JobDetail from './src/screens/job/JobDetail';
+import JobHistory from './src/screens/job/JobHistory';
 import NotificationListScreen from './src/screens/notification/NotificationListScreen';
 import { styles } from './assets/Styles';
 import { enableLatestRenderer } from 'react-native-maps';
@@ -171,6 +172,7 @@ const JobStackScreen = ({ navigation }) => {
             ),
         }}>
             <jobStack.Screen name="JobDetail" component={JobDetail} />
+            <jobStack.Screen name="JobHistory" component={JobHistory} />
         </jobStack.Navigator>
     )
 };

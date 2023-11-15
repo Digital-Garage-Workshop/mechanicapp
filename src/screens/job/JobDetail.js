@@ -55,7 +55,7 @@ const JobDetail = (prop) => {
     
     function handleItem(itemId) {
         if (isChecked.indexOf(itemId.toString()) > -1) {
-            setIsHandled(false);
+            /* setIsHandled(false); */
             return true;
         } else {
             return false;
@@ -67,6 +67,11 @@ const JobDetail = (prop) => {
     };
 
     useEffect(() => {
+        
+        setKilometr('');
+        setChangepart('');
+        setRepairnote('');
+        
         setLoading(true);
         setIsChecked([]);
         setIsHandled(false);
@@ -285,48 +290,52 @@ const JobDetail = (prop) => {
 
     const CheckListDisplay = (checkItems, checkIndex) => {
         const item = checkItems?.data;
-        console.log('item', item);
-        const checking = handleItem(item?.id);
         return (
-            <TouchableOpacity key={checkIndex} onPress={() => addItem(item?.id)} style={[styles.card, (checking) ? { backgroundColor: mainColor } : mainWhite]}>
+            <TouchableOpacity key={checkIndex} onPress={() => addItem(item?.id)} style={[styles.card, mainWhite]}>
                 <View style={[{ paddingHorizontal: 15, flex: 1, width: "80%" }]}>
-                    <Text style={[styles.title, checking ? { color: mainWhite } : { color: darkGrey }]}>{item?.name}</Text>
+                    <Text style={[styles.title, { color: darkGrey }]}>{item?.name}</Text>
                 </View>
-                {
-                    checking ? (
-                        <MaterialCommunityIcons name="checkbox-marked-circle" size={20} style={{ color: mainWhite, position: "absolute", right: 20 }} />
-                    ) : (
-                        <MaterialCommunityIcons name="checkbox-blank-circle-outline" size={20} style={{ position: "absolute", right: 20 }} color={darkGrey} />
-                    )
-                }
+                {/* <MaterialCommunityIcons name="checkbox-blank-circle-outline" size={20} style={{ position: "absolute", right: 20 }} color={darkGrey} /> */}
+            </TouchableOpacity>
+        );
+    };
+
+    const CheckedListDisplay = (checkItems, checkIndex) => {
+        const item = checkItems?.data;
+        return (
+            <TouchableOpacity key={checkIndex} onPress={() => addItem(item?.id)} style={[styles.card, { backgroundColor: mainColor }]}>
+                <View style={[{ paddingHorizontal: 15, flex: 1, width: "80%" }]}>
+                    <Text style={[styles.title, { color: mainWhite }]}>{item?.name}</Text>
+                </View>
+                {/* <MaterialCommunityIcons name="checkbox-marked-circle" size={20} style={{ color: mainWhite, position: "absolute", right: 20 }} /> */}
             </TouchableOpacity>
         );
     };
 
     return (
         <SafeAreaView style={[styles.mainContainer]}>
-            <ScrollView style={[styles.container]}>
-                <View style={customStyles.bodyContainer}>
-                    <FlatList
-                        showsVerticalScrollIndicator={true}
-                        data={checkListArr}
-                        initialNumToRender={7}
-                        keyExtractor={(item, index) => index.toString()}
-                        renderItem={({ item, index }) =>
-                            {
-                                return (
-                                    isHandled ? (
-                                            <CheckListDisplay key={index} data={item}  isMain={true}  index={index + 1} />
-                                        )
-                                        :  (
-                                            <CheckListDisplay key={index} data={item}  isMain={false}  index={index + 1} />
-                                        )
-                                )
-                            }
-                            
+            <View style={[customStyles.bodyContainer, {display: "none"}]}>
+                <FlatList
+                    showsVerticalScrollIndicator={true}
+                    data={checkListArr}
+                    initialNumToRender={7}
+                    keyExtractor={(item, index) => index.toString()}
+                    renderItem={({ item, index }) =>
+                        {
+                            return (
+                                isHandled ? (
+                                        <CheckListDisplay key={index} data={item}  isMain={true}  index={index + 1} />
+                                    )
+                                    :  (
+                                        <CheckListDisplay key={index} data={item}  isMain={true}  index={index + 1} />
+                                    )
+                            )
                         }
-                    />
-                </View>
+                        
+                    }
+                />
+            </View>
+            <ScrollView style={[styles.container, {paddingTop: 0}]}>
             {
                     isFinish ?  <></>
                     : 

@@ -7,10 +7,8 @@ import { mainColor, mainWhite, off, offCol } from '../../../assets/colors'
 import Entypo from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
 import userContext from '../../contexts/userContext';
-import { dvCommand } from '../../../util';
 import { runApiList } from '../../utils/service';
 import { filter, split } from 'lodash';
-import Modal from 'react-native-modal'
 import JobCard from '../../components/job/JobCard';
 import BottomSum from '../../components/common/BottomSum';
 import { useFocusEffect } from '@react-navigation/native';
