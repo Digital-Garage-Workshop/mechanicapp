@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TouchableOpacity, ScrollView, useWindowDimensions, StyleSheet, FlatList } from 'react-native'
+import { View, Text, SafeAreaView, TouchableOpacity, ScrollView, useWindowDimensions, StyleSheet, FlatList, RenderHtml } from 'react-native'
 import React, { useContext, useEffect, useLayoutEffect, useState } from 'react'
 import { useIsFocused } from "@react-navigation/native"
 import { darkGrey, lightBlack, mainColor, mainGrey, mainWhite, off } from '../../../assets/colors'
@@ -16,6 +16,8 @@ import Modal from 'react-native-modal'
 
 const JobDetail = (prop) => {
     const contentWidth = useWindowDimensions().width;
+    const { width } = useWindowDimensions();
+    const [isExpand, setIsExpand] = useState(false);
     const itemData = prop.route.params?.data;
     const navigation = prop?.navigation;
     const context = useContext(userContext);
@@ -50,14 +52,6 @@ const JobDetail = (prop) => {
 
         setIsChecked(isChecked);
         setIsHandled(true);
-    };
-    
-    function handleItem(itemId) {
-        if (isChecked.indexOf(itemId.toString()) > -1) {
-            return true;
-        } else {
-            return false;
-        }
     };
 
     const toggleModal = () => {
@@ -344,7 +338,78 @@ const JobDetail = (prop) => {
                     }
                 />
             </View>
-            <ScrollView style={[styles.container, {paddingTop: 0}]}>
+            <ScrollView style={[styles.container, {paddingTop: 10}]}>
+            <View style={customStyles.bodyContainer}>
+                <View style={[styles.card, { paddingHorizontal: 10, borderColor: `${itemArr.statuscolor}` }]}>
+                    <Text selectable={true} style={[styles.txtOff, customStyles.index]}>{itemArr?.carinfo.carnumber} /{itemArr?.category.name}/</Text>
+                    <View style={customStyles.itemContainer}>
+                        <View style={{ width: "90%", marginLeft: 5, marginTop: 5 }}>
+                            {
+                                isExpand ? (
+                                    null
+                                ) : (
+                                    <>
+                                        {itemArr?.subcategory ? 
+                                            <>
+                                                <Text selectable={true} numberOfLines={isExpand ? 10 : 1} style={[styles.txtOff, { marginBottom: 10 }]}>{itemArr?.subcategory.name ? itemArr?.subcategory.name : "..."}</Text>
+                                            </>
+                                            : <Text>...</Text>
+                                        }
+                                        
+                                        <Text selectable={true} numberOfLines={isExpand ? 10 : 1} style={[styles.txtOff, { marginBottom: 10 }]}>{itemArr?.bookingdate ? itemArr?.bookingdate : "өдөр тодорхойгүй"} {itemArr?.bookingtime ? itemArr?.bookingtime : "цаг тодорхойгүй"}</Text>
+                                    </>
+                                    
+                                )
+                            }
+                            <Text selectable={true} numberOfLines={isExpand ? 10 : 1} style={[styles.title, { marginBottom: 10 }]} >{itemArr?.customer.name ? itemArr?.customer.name : "..."}</Text>
+                            <View style={[{justifyContent: "flex-start", flexDirection: 'row', flexWrap: 'wrap', }]}>
+                                <Text selectable={true} numberOfLines={isExpand ? 10 : 1} style={[styles.txtOff, {paddingHorizontal: 10, paddingVertical: 2, color: '#FFF', backgroundColor: `${itemArr?.statuscolor}`}]}>{itemArr?.status_mn ? itemArr?.status_mn : "..."}</Text>
+                            </View>
+                        </View>
+                        {
+                            isExpand ? (
+                                <TouchableOpacity onPress={() => setIsExpand(!isExpand)} style={{ position: "absolute", right: 0 }}>
+                                    <Entypo name="chevron-down" size={20} color={`${itemArr.statuscolor}`} />
+                                </TouchableOpacity>
+                            ) : (
+                                <TouchableOpacity onPress={() => setIsExpand(!isExpand)} style={{ position: "absolute", right: 0 }}>
+                                    <Entypo name="chevron-right" size={20} color={`${itemArr.statuscolor}`} />
+                                </TouchableOpacity>
+                            )
+                        }
+                    </View>
+                    {
+                        isExpand ? (
+                            <View style={{ marginTop: 10, marginHorizontal: 5 }}>
+                                <View style={[customStyles.rowContainer]}>
+                                    <Text selectable={true} style={[styles.txtOff, { width: '45%' }]}>Машин:</Text>
+                                    <Text selectable={true} style={[styles.txt, customStyles.value]}>{itemArr?.carinfo.carmanu ? itemArr?.carinfo.carmanu : "..."} {itemArr?.carinfo.carmodel ? itemArr?.carinfo.carmodel : "..."}</Text>
+                                </View>
+                                <View style={customStyles.rowContainer}>
+                                    <Text selectable={true} style={[styles.txtOff, { width: '45%' }]}>Улсын дугаар</Text>
+                                    <Text selectable={true} style={[styles.txt, customStyles.value]}>{itemArr?.carinfo.carnumber ? itemArr?.carinfo.carnumber : "..."}</Text>
+                                </View>
+                                <View style={[customStyles.rowContainer]}>
+                                    <Text selectable={true} style={[styles.txtOff, { width: '45%' }]}>Үйлдвэрлэсэн он:</Text>
+                                    <Text selectable={true} style={[styles.txt, customStyles.value]}>{itemArr?.carinfo?.buildyear ? itemArr?.carinfo.buildyear : "..."}</Text>
+                                </View>
+                                <View style={[customStyles.rowContainer]}>
+                                    <Text selectable={true} style={[styles.txtOff, { width: '45%' }]}>Арлын дугаар:</Text>
+                                    <Text selectable={true} style={[styles.txt, customStyles.value]}>{itemArr?.carinfo?.vin_number ? itemArr?.carinfo.vin_number : "..."}</Text>
+                                </View>
+                                <View style={[customStyles.rowContainer]}>
+                                    <Text selectable={true} style={[styles.txtOff, { width: '45%' }]}>Хөдөлгүүр/багтаамж:</Text>
+                                    <Text selectable={true} style={[styles.txt, customStyles.value]}>{itemArr?.carinfo?.capacity ? itemArr?.carinfo.capacity : "..."}</Text>
+                                </View>
+                                <View style={[customStyles.rowContainer]}>
+                                    <Text selectable={true} style={[styles.txtOff, { width: '45%' }]}>Гүйлт:</Text>
+                                    <Text selectable={true} style={[styles.txt, customStyles.value]}>{itemArr?.carinfo?.kilometr ? itemArr?.carinfo.kilometr : "..."}{itemArr?.carinfo?.kilotype ? " "+itemArr?.carinfo.kilotype : "..."}</Text>
+                                </View>
+                            </View>
+                        ) : null
+                    }
+                </View >
+            </View >
             {
                     isFinish ?  <></>
                     : 
@@ -379,7 +444,10 @@ const JobDetail = (prop) => {
                         </> : <></>
                     }
                     <OffCard label="Status" value={itemArr?.status} icon={<FontAwesome5 name="square" color={mainColor} size={25} />} />
-                    {isFinish ? <></>
+                    {isFinish ? <>
+                                <SingleInput label="Засварын тэмдэглэл" editable={false} setValue={setRepairnote} value={repairNote} isMultiline={true} />
+                                <SingleInput label="Солих шаардлагатай сэлбэг" editable={false}  setValue={setChangepart} value={changePart} isMultiline={true} />
+                            </>
                         : 
                         isStart ? 
                             <>
@@ -396,22 +464,40 @@ const JobDetail = (prop) => {
                 </View>
                 <View style={customStyles.headerContainer}>
                     {
-                    isFinish ? <></>
+                    isFinish ? <>
+                            <TouchableOpacity style={[customStyles.container, styles.card, { marginTop: 10 }]}>
+                                <Text numberOfLines={2} style={[styles.txt, { width: "70%" }]}>{measureType ? measureType.name : "Сонгох"}</Text>
+                            </TouchableOpacity>
+                            <SingleInput label="Гүйлт оруулах" isNumber={true} editable={false}  setValue={setKilometr} value={(itemArr?.carinfo.kilometr ? itemArr?.carinfo.kilometr : kilometr)} />
+                        </>
                         : 
                     isStart ? 
                         <>
-                            <TouchableOpacity onPress={toggleModal} style={[customStyles.container, styles.card, { marginTop: 10 }]}>
-                                <Text numberOfLines={2} style={[styles.txt, { width: "70%" }]}>{measureType ? measureType.name : "Сонгох"}</Text>
-                                <Entypo name="chevron-right" size={20} color={mainColor} style={{ position: 'absolute', right: 5 }} />
-                            </TouchableOpacity>
                             {
-                                <SingleInput label="Гүйлт оруулах" isNumber={true} setValue={setKilometr} value={(itemArr?.carinfo.kilometr ? itemArr?.carinfo.kilometr : kilometr)} />
+                                itemArr?.carinfo.kilometr ? <>
+                                    <TouchableOpacity style={[customStyles.container, styles.card, { marginTop: 10 }]}>
+                                        <Text numberOfLines={2} style={[styles.txt, { width: "70%" }]}>{measureType ? measureType.name : "Сонгох"}</Text>
+                                    </TouchableOpacity>
+                                </>
+                                : <>
+                                    <TouchableOpacity onPress={toggleModal} style={[customStyles.container, styles.card, { marginTop: 10 }]}>
+                                        <Text numberOfLines={2} style={[styles.txt, { width: "70%" }]}>{measureType ? measureType.name : "Сонгох"}</Text>
+                                        <Entypo name="chevron-right" size={20} color={mainColor} style={{ position: 'absolute', right: 5 }} />
+                                    </TouchableOpacity>
+                                </>
                             }
-                            <View style={customStyles.bodyContainer}>
-                                <TouchableOpacity onPress={kiloRequest} style={[styles.btn, { alignSelf: "center", paddingHorizontal: "20%", marginTop: 10 }]}>
-                                    <Text style={[styles.title, { color: mainWhite }]}>Хадгалах</Text>
-                                </TouchableOpacity>
-                            </View>
+                            <SingleInput label="Гүйлт оруулах" isNumber={true} editable={(itemArr?.carinfo.kilometr ? false : true)}  setValue={setKilometr} value={(itemArr?.carinfo.kilometr ? itemArr?.carinfo.kilometr : kilometr)} />
+                            {
+                                itemArr?.carinfo.kilometr ? <></>
+                                : <>
+                                    <View style={customStyles.bodyContainer}>
+                                        <TouchableOpacity onPress={kiloRequest} style={[styles.btn, { alignSelf: "center", paddingHorizontal: "20%", marginTop: 10 }]}>
+                                            <Text style={[styles.title, { color: mainWhite }]}>Хадгалах</Text>
+                                        </TouchableOpacity>
+                                    </View>
+                                </>
+                            }
+                            
                             <Modal propagateSwipe={true} isVisible={visible} swipeDirection="left" style={customStyles.modalContainer} onBackdropPress={() => setVisible(false)}>
                                 <View style={customStyles.modalLilContainer}>
                                     <ScrollView>

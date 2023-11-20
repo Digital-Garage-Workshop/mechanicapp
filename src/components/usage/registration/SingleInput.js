@@ -13,6 +13,7 @@ const SingleInput = props => {
             <Text style={[customStyles.label, isActive ? { color: mainColor } : null]}>{props ? props.label : ""}</Text>
             <TextInput
                 autoCorrect={false}
+                editable={props?.editable}
                 style={[customStyles.value, isActive ? { borderBottomColor: mainColor, borderBottomWidth: 0.5 } : { borderBottomColor: off, borderBottomWidth: 1 }]}
                 value={(props?.value).toString()}
                 keyboardType={whtKeyboard}

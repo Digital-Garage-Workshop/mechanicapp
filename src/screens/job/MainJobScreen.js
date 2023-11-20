@@ -240,7 +240,7 @@ const MainJobScreen = () => {
                     }}
                 />
             </View>
-            <BottomSum sum={filterdTotalCount} current={filteredData.length} />
+            <BottomSum sum={filterdTotalCount} /* current={filteredData.length} */ />
         </SafeAreaView>
     );
 };

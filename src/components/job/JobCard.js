@@ -4,10 +4,8 @@ import WeeklyCalendar from 'react-native-weekly-calendar';
 import { mainColor } from '../../../assets/colors';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import { styles } from '../../../assets/Styles'
-import { decode } from 'html-entities'
-import RenderHtml from 'react-native-render-html';
-
 import { useNavigation } from '@react-navigation/native';
 
 const JobCard = (props) => {
@@ -33,18 +31,14 @@ const JobCard = (props) => {
         { 'start': '2020-03-26 22:00:00', 'duration': '01:00:00', 'note': 'Schedule 5' }
     ];
 
-    const source = {
-        html: decode(data?.formula)
-    };
-
     if (isMain) {
         return (
             <>
                 {/* <View style={styles.container}>
                     <WeeklyCalendar events={sampleEvents} style={{ height: 400 }} />
                 </View> */}
-                <View style={[styles.card, { paddingHorizontal: 10 }]}>
-                    <Text selectable={true} style={[styles.txtOff, customStyles.index]}>{index ? index : "..."}. {data?.carinfo.carnumber} /{data?.category.name}/ /{data?.jobid}/</Text>
+                <View style={[styles.card, { paddingHorizontal: 10, borderColor: `${data.statuscolor}` }]}>
+                    <Text selectable={true} style={[styles.fatTxt, customStyles.index]}>{index ? index : "..."}. {data?.carinfo.carnumber} /{data?.category.name}/</Text>
                     <View style={customStyles.itemContainer}>
                         <View style={{ width: "90%", marginLeft: 5, marginTop: 5 }}>
                             {
@@ -60,29 +54,23 @@ const JobCard = (props) => {
                                         }
                                         
                                         <Text selectable={true} numberOfLines={isExpand ? 10 : 1} style={[styles.txtOff, { marginBottom: 10 }]}>{data.bookingdate ? data.bookingdate : "өдөр тодорхойгүй"} {data.bookingtime ? data.bookingtime : "цаг тодорхойгүй"}</Text>
-                                        <RenderHtml
-                                            defaultTextProps={{ selectable: true }}
-                                            contentWidth={width}
-                                            source={source}
-                                            emSize={10}
-                                        />
                                     </>
                                     
                                 )
                             }
                             <Text selectable={true} numberOfLines={isExpand ? 10 : 1} style={[styles.title, { marginBottom: 10 }]} >{data.customer.name ? data.customer.name : "..."}</Text>
                             <View style={[{justifyContent: "flex-start", flexDirection: 'row', flexWrap: 'wrap', }]}>
-                                <Text selectable={true} numberOfLines={isExpand ? 10 : 1} style={[styles.txtOff, {paddingHorizontal: 10, paddingVertical: 2, color: '#FFF', backgroundColor: `${data.statuscolor}`}]}>{data.status ? data.status : "..."}</Text>
+                                <Text selectable={true} numberOfLines={isExpand ? 10 : 1} style={[styles.txtOff, {paddingHorizontal: 10, paddingVertical: 2, color: '#FFF', backgroundColor: `${data.statuscolor}`}]}>{data.status_mn ? data.status_mn : "..."}</Text>
                             </View>
                         </View>
                         {
                             isExpand ? (
                                 <TouchableOpacity onPress={() => setIsExpand(!isExpand)} style={{ position: "absolute", right: 0 }}>
-                                    <Entypo name="chevron-down" size={20} color={mainColor} />
+                                    <Entypo name="chevron-down" size={20} color={`${data.statuscolor}`} />
                                 </TouchableOpacity>
                             ) : (
                                 <TouchableOpacity onPress={() => setIsExpand(!isExpand)} style={{ position: "absolute", right: 0 }}>
-                                    <Entypo name="chevron-right" size={20} color={mainColor} />
+                                    <Entypo name="chevron-right" size={20} color={`${data.statuscolor}`} />
                                 </TouchableOpacity>
                             )
                         }
@@ -100,12 +88,6 @@ const JobCard = (props) => {
                                 </View>
                                 <View style={[customStyles.rowContainer]}>
                                     <Text selectable={true} style={[styles.txtOff, { width: '45%' }]}>Үйлдвэрлэсэн он:</Text>
-                                    {/* <RenderHtml
-                                        defaultTextProps={{ selectable: true }}
-                                        contentWidth={width}
-                                        source={source}
-                                        emSize={10}
-                                    /> */}
                                     <Text selectable={true} style={[styles.txt, customStyles.value]}>{data?.carinfo?.buildyear ? data.carinfo.buildyear : "..."}</Text>
                                 </View>
                                 <View style={[customStyles.rowContainer]}>
@@ -140,7 +122,7 @@ const JobCard = (props) => {
                                         }
                                     })} style={[styles.jobCard, { flex: 0, margin: 0, width: '100%' }]}>
                                         <View style={{ flexDirection: 'row', marginHorizontal: 20, marginVertical: 10, alignItems: 'center' }}>
-                                            <Feather name="file" size={20} color={mainColor} style={{ width: "10%" }} />
+                                            <FontAwesome5 name="bars" color={mainColor} size={20} style={{ width: "10%" }} />
                                             <Text style={styles.title}>Түүх</Text>
                                             <Entypo name="chevron-right" size={20} color={mainColor} style={{ position: 'absolute', right: 0 }} />
                                         </View>
