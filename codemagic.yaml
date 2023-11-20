@@ -45,8 +45,8 @@ workflows:
         - firebase_credentials
       vars:
         BUNDLE_ID: 'com.service.garage'
-        XCODE_WORKSPACE: 'service.garage.xcworkspace' # <-- Name of your Xcode workspace
-        XCODE_SCHEME: 'service.garage' # <-- Name of your Xcode scheme
+        XCODE_WORKSPACE: 'service.garage.xcworkspace'
+        XCODE_SCHEME: 'service.garage'
     scripts:
       - name: Install npm dependencies
         script: |
