@@ -23,7 +23,6 @@ workflows:
           ./gradlew assembleRelease
     artifacts:
       - android/app/build/outputs/**/*.apk
-
     publishing:
       firebase:
         firebase_service_account: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
@@ -55,7 +54,7 @@ workflows:
         script: |
           cd ios && pod install
       - name: Set up code signing settings on Xcode project
-        script: xcode-project use-profiles
+        script: xcode-project use-profiles --project ios/*.xcodeproj
       - name: Build ipa for distribution
         script: |
           xcode-project build-ipa \
