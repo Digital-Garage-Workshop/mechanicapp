@@ -28,6 +28,7 @@ target 'service.garage' do
 
   permissions_path = '../node_modules/react-native-permissions/ios'
   pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
+  pod 'Google-Maps-iOS-Utils', :git => 'https://github.com/Simon-TechForm/google-maps-ios-utils.git', :branch => 'feat/support-apple-silicon'
   rn_maps_path = '../node_modules/react-native-maps'
   pod 'react-native-google-maps', :path => rn_maps_path
 
@@ -39,8 +40,9 @@ target 'service.garage' do
   post_install do |installer|
     react_native_post_install(
       installer,
-      config[:reactNativePath],
       :mac_catalyst_enabled => false
     )
+    __apply_Xcode_12_5_M1_post_install_workaround(installer)
+
   end
 end
