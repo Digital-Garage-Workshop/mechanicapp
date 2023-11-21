@@ -28,7 +28,6 @@ target 'service.garage' do
 
   permissions_path = '../node_modules/react-native-permissions/ios'
   pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
-  pod 'Google-Maps-iOS-Utils', :git => 'https://github.com/Simon-TechForm/google-maps-ios-utils.git', :branch => 'feat/support-apple-silicon'
   rn_maps_path = '../node_modules/react-native-maps'
   pod 'react-native-google-maps', :path => rn_maps_path
 

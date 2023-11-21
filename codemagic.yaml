@@ -11,9 +11,12 @@ workflows:
       vars:
         PACKAGE_NAME: 'com.garage.mechanic'
     scripts:
+      - name: Install pnpm
+        script: |
+          npm install -g pnpm
       - name: Install npm dependencies
         script: |
-          yarn install
+          pnpm install
       - name: Set Android SDK location
         script: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
@@ -47,9 +50,12 @@ workflows:
         XCODE_WORKSPACE: 'service.garage.xcworkspace'
         XCODE_SCHEME: 'service.garage'
     scripts:
+      - name: Install pnpm
+        script: |
+          npm install -g pnpm
       - name: Install npm dependencies
         script: |
-          yarn install
+          pnpm install
       - name: Install CocoaPods dependencies
         script: |
           cd ios && pod install
