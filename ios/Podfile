@@ -1,16 +1,10 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-project '/Users/billy/Development/mobile.projects/service.garage/ios/service.garage.xcodeproj'
 platform :ios, '13.0'
 install! 'cocoapods', :deterministic_uuids => false
 
 target 'service.garage' do
-  permissions_path = '../node_modules/react-native-permissions/ios'
-  pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
-  rn_maps_path = '../node_modules/react-native-maps'
-  pod 'react-native-google-maps', :path => rn_maps_path
-
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -31,6 +25,11 @@ target 'service.garage' do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
+
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
+  rn_maps_path = '../node_modules/react-native-maps'
+  pod 'react-native-google-maps', :path => rn_maps_path
 
   target 'service.garageTests' do
     inherit! :complete
