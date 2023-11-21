@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* service.garageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* service.garageTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-service.garage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-service.garage.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-service.garage-service.garageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-service.garage-service.garageTests.a */; };
+		5BE6C2E7553AB13086EFDB6C /* libPods-service.garage-service.garageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D677124AD36BBC7C0DC680 /* libPods-service.garage-service.garageTests.a */; };
+		E2670A377ECBD7DB0021709D /* libPods-service.garage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D50358965A50924CFA008DEF /* libPods-service.garage.a */; };
 		FA6937E1297A227F00D9DB0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		FA6B4746297A242600437DA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -50,31 +50,31 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = service.garage/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = service.garage/main.m; sourceTree = "<group>"; };
 		15AE3D6095CD415FA72A6283 /* userInfoBg.jpg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = userInfoBg.jpg; path = ../assets/images/userInfoBg.jpg; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-service.garage-service.garageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-service.garage-service.garageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7E7FB07B5A428FB3E2F067 /* colors.js */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = colors.js; path = ../assets/colors.js; sourceTree = "<group>"; };
 		23825F57960448C68E557B78 /* video.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = video.png; path = ../assets/images/video.png; sourceTree = "<group>"; };
 		29F6BE5FCBB04D97BFDE575D /* montreal.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = montreal.png; path = ../assets/images/montreal.png; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-service.garage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-service.garage.debug.xcconfig"; path = "Target Support Files/Pods-service.garage/Pods-service.garage.debug.xcconfig"; sourceTree = "<group>"; };
 		3E5243B9CFC240219E5EA4AF /* roterdam.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = roterdam.png; path = ../assets/images/roterdam.png; sourceTree = "<group>"; };
 		452E8232DD7C4216A489885E /* file.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = file.png; path = ../assets/images/file.png; sourceTree = "<group>"; };
+		45C8CDACF313C5203D081DF1 /* Pods-service.garage-service.garageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-service.garage-service.garageTests.debug.xcconfig"; path = "Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C776AF6DAE44616B10D5D26 /* profile.jpg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = profile.jpg; path = ../assets/images/profile.jpg; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-service.garage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-service.garage.release.xcconfig"; path = "Target Support Files/Pods-service.garage/Pods-service.garage.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-service.garage-service.garageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-service.garage-service.garageTests.debug.xcconfig"; path = "Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-service.garage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-service.garage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4168F7CFEC2D2D7347DF6C /* Pods-service.garage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-service.garage.debug.xcconfig"; path = "Target Support Files/Pods-service.garage/Pods-service.garage.debug.xcconfig"; sourceTree = "<group>"; };
 		64DAC54956D542FEADF690D8 /* basel.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = basel.png; path = ../assets/images/basel.png; sourceTree = "<group>"; };
 		7092E42C7E0148658DD6C941 /* marker.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = marker.png; path = ../assets/images/marker.png; sourceTree = "<group>"; };
+		799014D929FB34C29770B803 /* Pods-service.garage-service.garageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-service.garage-service.garageTests.release.xcconfig"; path = "Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A2B580FF4564E4CA491B19A /* swipe1.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = swipe1.png; path = ../assets/images/swipe1.png; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = service.garage/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-service.garage-service.garageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-service.garage-service.garageTests.release.xcconfig"; path = "Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests.release.xcconfig"; sourceTree = "<group>"; };
 		920253D54F4A490D93787368 /* bgdark.jpg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = bgdark.jpg; path = ../assets/images/bgdark.jpg; sourceTree = "<group>"; };
 		94A8CBD057BD4F7D999CBBFD /* BoajLogo.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = BoajLogo.png; path = ../assets/images/BoajLogo.png; sourceTree = "<group>"; };
 		9A64130FC5954345861E8264 /* swipe2.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = swipe2.png; path = ../assets/images/swipe2.png; sourceTree = "<group>"; };
 		AA54781164D749769B21894D /* nodata.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = nodata.png; path = ../assets/images/nodata.png; sourceTree = "<group>"; };
+		B0D677124AD36BBC7C0DC680 /* libPods-service.garage-service.garageTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-service.garage-service.garageTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D64186A97F433FBD574E0E /* noUser.jpeg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = noUser.jpeg; path = ../assets/images/noUser.jpeg; sourceTree = "<group>"; };
 		C0EFD511DDF34F7584AA7015 /* Styles.js */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Styles.js; path = ../assets/Styles.js; sourceTree = "<group>"; };
 		C72E8293BF0644A292713DAF /* swipe3.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = swipe3.png; path = ../assets/images/swipe3.png; sourceTree = "<group>"; };
 		CA344118C34C46DE800229AA /* conv.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = conv.png; path = ../assets/images/conv.png; sourceTree = "<group>"; };
 		CEB3F6754B724FC69E1ACA1C /* minamata.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = minamata.png; path = ../assets/images/minamata.png; sourceTree = "<group>"; };
+		D1BBED1EBEC6A6B87C0E4227 /* Pods-service.garage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-service.garage.release.xcconfig"; path = "Target Support Files/Pods-service.garage/Pods-service.garage.release.xcconfig"; sourceTree = "<group>"; };
+		D50358965A50924CFA008DEF /* libPods-service.garage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-service.garage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EE47378B15A645BDB6864D04 /* noimg.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = noimg.png; path = ../assets/images/noimg.png; sourceTree = "<group>"; };
 		F108662A4AF544FF91E7F81C /* GreenLogo.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GreenLogo.png; path = ../assets/images/GreenLogo.png; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-service.garage-service.garageTests.a in Frameworks */,
+				5BE6C2E7553AB13086EFDB6C /* libPods-service.garage-service.garageTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-service.garage.a in Frameworks */,
+				E2670A377ECBD7DB0021709D /* libPods-service.garage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +137,8 @@
 			children = (
 				FA654251298B62C400694C97 /* AVFoundation.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-service.garage.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-service.garage-service.garageTests.a */,
+				D50358965A50924CFA008DEF /* libPods-service.garage.a */,
+				B0D677124AD36BBC7C0DC680 /* libPods-service.garage-service.garageTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,10 +207,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-service.garage.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-service.garage.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-service.garage-service.garageTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-service.garage-service.garageTests.release.xcconfig */,
+				5C4168F7CFEC2D2D7347DF6C /* Pods-service.garage.debug.xcconfig */,
+				D1BBED1EBEC6A6B87C0E4227 /* Pods-service.garage.release.xcconfig */,
+				45C8CDACF313C5203D081DF1 /* Pods-service.garage-service.garageTests.debug.xcconfig */,
+				799014D929FB34C29770B803 /* Pods-service.garage-service.garageTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -222,12 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "service.garageTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				DD024B9B67BE0540A1EBEBCF /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				6D3E75850112282813CC2B82 /* [CP] Embed Pods Frameworks */,
+				98D8EE271ABEB140DCE4EA81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,15 +243,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "service.garage" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				96B79981B60EE602BBB216F2 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
 				FA05C1462976793400613A0E /* Copy Files */,
 				FA6937E0297A226400D9DB0D /* Resources */,
+				34AD0C8E48DC88A2C7AD8CA2 /* [CP] Embed Pods Frameworks */,
+				242F944D7AB054E9BDC60827 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -336,7 +336,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		242F944D7AB054E9BDC60827 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-service.garage/Pods-service.garage-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-service.garage/Pods-service.garage-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-service.garage/Pods-service.garage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34AD0C8E48DC88A2C7AD8CA2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -353,29 +370,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-service.garage/Pods-service.garage-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		6D3E75850112282813CC2B82 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-service.garage-service.garageTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		96B79981B60EE602BBB216F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -397,41 +409,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-service.garage/Pods-service.garage-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-service.garage/Pods-service.garage-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-service.garage/Pods-service.garage-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+		98D8EE271ABEB140DCE4EA81 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -446,6 +424,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-service.garage-service.garageTests/Pods-service.garage-service.garageTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD024B9B67BE0540A1EBEBCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-service.garage-service.garageTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -500,7 +500,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-service.garage-service.garageTests.debug.xcconfig */;
+			baseConfigurationReference = 45C8CDACF313C5203D081DF1 /* Pods-service.garage-service.garageTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,7 +528,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-service.garage-service.garageTests.release.xcconfig */;
+			baseConfigurationReference = 799014D929FB34C29770B803 /* Pods-service.garage-service.garageTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -553,7 +553,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-service.garage.debug.xcconfig */;
+			baseConfigurationReference = 5C4168F7CFEC2D2D7347DF6C /* Pods-service.garage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = AppIcon;
@@ -589,7 +589,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-service.garage.release.xcconfig */;
+			baseConfigurationReference = D1BBED1EBEC6A6B87C0E4227 /* Pods-service.garage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = AppIcon;
@@ -663,6 +663,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -683,11 +684,17 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-Wl",
+					"-ld_classic",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
@@ -731,6 +738,10 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION,
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -748,11 +759,17 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-Wl",
+					"-ld_classic",
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
