@@ -489,7 +489,7 @@ PODS:
     - React-Core
   - RNVectorIcons (9.2.0):
     - React-Core
-  - SocketRocket (0.6.0)
+  - SocketRocket (0.6.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -824,10 +824,10 @@ SPEC CHECKSUMS:
   RNShare: d82e10f6b7677f4b0048c23709bd04098d5aee6c
   RNSVG: d00c8f91c3cbf6d476451313a18f04d220d4f396
   RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
-  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
+  SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 99caf8d5ab45e9d637ee6e0174ec16fbbb01bcfc
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: dfcd704af8d2ad5078266e484a88ae8e7ed95166
+PODFILE CHECKSUM: 2ea6364d41cb06bbe573b0cc4095ce80deabf377
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.11.3
