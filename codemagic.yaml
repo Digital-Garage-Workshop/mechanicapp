@@ -9,7 +9,7 @@ workflows:
       groups:
         - firebase_credentials
       vars:
-        PACKAGE_NAME: 'com.service.garage'
+        PACKAGE_NAME: 'com.garage.mechanic'
     scripts:
       - name: Install npm dependencies
         script: |
@@ -40,11 +40,11 @@ workflows:
     environment:
       ios_signing:
         distribution_type: development
-        bundle_identifier: 'com.service.garage'
+        bundle_identifier: 'com.garage.mechanic'
       groups:
         - firebase_credentials
       vars:
-        BUNDLE_ID: 'com.service.garage'
+        BUNDLE_ID: 'com.garage.mechanic'
         XCODE_WORKSPACE: 'service.garage.xcworkspace'
         XCODE_SCHEME: 'service.garage'
     scripts:
@@ -54,6 +54,8 @@ workflows:
       - name: Install CocoaPods dependencies
         script: |
           cd ios && pod install
+      - name: Set up code signing settings on Xcode project
+        script: xcode-project use-profiles
       - name: Build ipa for distribution
         script: |
           xcode-project build-ipa \
