@@ -561,7 +561,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 95;
-				DEVELOPMENT_TEAM = 475H8SV63H;
+				DEVELOPMENT_TEAM = 26BLJ8M238;
 				ENABLE_BITCODE = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = service.garage/Info.plist;
@@ -577,7 +577,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.service.garage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.garage.mechanic;
 				PRODUCT_NAME = service.garage;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -597,7 +597,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 95;
-				DEVELOPMENT_TEAM = 475H8SV63H;
+				DEVELOPMENT_TEAM = 26BLJ8M238;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = service.garage/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = service.garage;
@@ -612,7 +612,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.service.garage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.garage.mechanic;
 				PRODUCT_NAME = service.garage;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
